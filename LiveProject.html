@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <style>
+    *{
+      color:black ;
+      background-color: darkgreen;
+    }
+  </style>
+    <button class="rahul" style="margin-bottom: 10px;">+</button>
+    
+    <div class="append"></div>
+    <script src="https://code.jquery.com/jquery-1.12.4.js" 
+  integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" 
+  crossorigin="anonymous"></script>
+  <script>
+      $(document).ready(function(){
+          var i=0;
+          $(".rahul").click(function(){
+            $(".append").append("<div class='row"+i+"' style='margin-bottom:10px'><h3>NAME</h3><input type='text'><button class='akash' style='margin-bottom: 10px; onclick='rowAdd("+i+")'>+</button><button class='loltay' onclick='rowDelete("+i+")'>Baad de na baal</button></div>")
+            i++; 
+          })   
+      })
+      function rowDelete(id){
+          $(".row"+id).remove();    
+          }
+      function rowAdd(id){
+         $(".row"+id).add();
+      }
+                 
+  </script>
+</body>
+</html>
