@@ -58,3 +58,14 @@ let time;
     time = a.getHours+ ':'+a.getMinutes+ ':'+a.getSeconds;
     document.getElementById('id name');
  }, 1000);
+
+ let a;
+ let date;
+ let time;
+  setInterval(() => {
+    a = new Date;
+    const options= {weekday:'long',year: 'numeric',month:'long', day:'numreric'}
+    date=a.toLocaleDateString(options,undefined);
+    time= a.getHours+ ':'+a.getMinutes+ ':'+a.getSeconds;
+    document.getElementById('id name');
+  }, 1000);
